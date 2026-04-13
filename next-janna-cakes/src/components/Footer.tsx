@@ -1,9 +1,15 @@
+'use client';
+
+import { useLanguage } from '../context/LanguageContext';
+
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="footer">
       <div className="container">
-        <p>&copy; 2024 janna.cakes. Все права защищены.</p>
-        <p>Сделано с <span className="heart">❤️</span> для вас</p>
+        <p>{t.footer.rights}</p>
+        <p>{t.footer.madeWith} <span className="heart">❤️</span> {t.footer.forYou}</p>
       </div>
     </footer>
   );
